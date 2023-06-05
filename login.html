@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body{
+background-color: #F3F4F6; 
+}
+.card{
+padding: 15px 15px;
+border-radius: 6px;
+border: 4px solid white;
+background-color: white;
+margin:280px auto;
+width: 400px;
+
+}
+.login-email{
+height: 35px;
+width:100%;
+border-radius: 6px;
+border: 1px solid #D1D5DA;
+}
+p{
+    font-size: 13px;
+}
+.login-Password{
+height: 35px;
+width:100%;
+border-radius: 6px;
+border: 1px solid #D1D5DA;
+
+}
+.rem{
+ display: flex;
+}
+.checkbox{
+height: 15px;
+width: 15px;
+margin-top: 14px;
+margin-right: 10px;
+border-color: #121212;
+}
+.login-botton{
+background-color: #121212;
+color:white;
+border-radius: 6px;
+height: 30px;
+width: 80px;
+}
+.login{
+   text-align: right;
+}
+</style>
+<body>
+ <div class="card">
+  <form class="form" action="/login" method="post">
+    @csrf
+   <p>Email</p>
+   <input type="email" class="login-email" name="email" value="{{ old('email') }}">
+   <p>Password</p>
+   <input type="password" class="login-Password" name="password"><br>
+   <div class="rem">
+      <input type="checkbox" class="checkbox" style="color:#D1D5DA" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}/>
+      <p class="me">Remember me</p>
+   </div>
+    <div class="login">
+     <input type="submit" class="login-botton">
+    </div>
+  </form>
+ </div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: #F3F4F6;
+    }
+
+    .card {
+        padding: 15px 15px;
+        border-radius: 6px;
+        border: 4px solid white;
+        background-color: white;
+        margin: 180px auto;
+        width: 400px;
+
+    }
+
+    .login-email {
+        height: 35px;
+        width: 100%;
+        border-radius: 6px;
+        border: 1px solid #D1D5DA;
+    }
+
+    p {
+        font-size: 13px;
+    }
+
+    .login-Password {
+        height: 35px;
+        width: 100%;
+        border-radius: 6px;
+        border: 1px solid #D1D5DA;
+
+    }
+
+    .rem {
+        display: flex;
+    }
+
+    .checkbox {
+        height: 15px;
+        width: 15px;
+        margin-top: 14px;
+        margin-right: 10px;
+        border-color: #121212;
+    }
+
+    .register-botton {
+        background-color: #121212;
+        color: white;
+        border-radius: 6px;
+        height: 40px;
+        width: 100px;
+    }
+
+    .register{
+        display: flex;
+        width: 100%;
+         justify-content:flex-end; 
+        margin-top: 20px;
+
+    }
+    .login{
+       margin-left: 15px;
+    }
+    .al{
+    margin-top: 10px;
+    font-size: 13px;
+    color:black;
+    }
+</style>
+
+<body>
+    <div class="card">
+        <form>
+            <p>Name</p>
+            <input type="text" class="login-email" name="name" value="{{ old('name') }}">
+            <p>Email</p>
+            <input type="text" class="login-email" name="email" value="{{ old('email') }}">
+            <p>Password</p>
+            <input type="text" class="login-Password" name="password">
+            <p>Confirm Password</p>
+            <input type="text" class="login-Password" name="password_confirmation" >
+            <div class="register">
+              <a href="" class="al">Already registered?</a>
+              <div class="login">
+                 <input type="submit" value="REGISTER" class="register-botton">
+              </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
